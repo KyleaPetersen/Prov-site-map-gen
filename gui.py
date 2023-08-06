@@ -13,7 +13,6 @@ def submit_button_clicked():
 
     user_inputs['unit'] = user_inputs['unit'][:1] + "1" + user_inputs['unit'][2:]
     
-    
     #find coordinates for PDF
     apt = apartment(str.upper(user_inputs['unit']))
     # parking = parking_spot(str.upper(user_inputs['parking']))
