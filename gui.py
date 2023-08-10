@@ -1,19 +1,22 @@
 import tkinter as tk
 from coordinates import *
 from main import *
-
-# Function to execute code when "Submit" button is clicked
+#--------------------------------
+# What happens when you hit click
+#--------------------------------
 def submit_button_clicked():
     
-    #get value's about new resident
+    #get value's for new resident
     user_inputs = {
         'unit': apartment_entry.get(),
         'parking': parking_entry.get(),
     }
 
+    #sets unit number to bottom floor so I only need 1 set of coordinates.
     user_inputs['unit'] = user_inputs['unit'][:1] + "1" + user_inputs['unit'][2:]
     
     #find coordinates for PDF
+    
     apt = apartment(str.upper(user_inputs['unit']))
     # parking = parking_spot(str.upper(user_inputs['parking']))
     dumpster = dumpster_spot(str.upper(user_inputs['unit']))
@@ -24,6 +27,10 @@ def submit_button_clicked():
 
     root.destroy()
     # Add more code here for further processing or displaying results
+
+#--------------------------------
+# Set up the UI
+#--------------------------------
 
 # Create the GUI window
 root = tk.Tk()

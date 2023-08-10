@@ -55,7 +55,7 @@ def apartment(unit):
         "H103": (360, 300),
         "H104": (360, 312),
 
-        "J101": (360, 180),
+        "J101": (360, 181),
         "J102": (360, 198),
         "J103": (360, 214),
         "J104": (360, 229),
@@ -66,7 +66,7 @@ def apartment(unit):
         "J109": (346, 229),
         "J110": (346, 214),
         "J111": (346, 198),
-        "J112": (346, 180),
+        "J112": (346, 181),
 
         "K101": (316, 186),
         "K102": (316, 204),
@@ -104,35 +104,18 @@ def parking_spot(parking):
 
 def dumpster_spot(unit):
 
-    index:str
-    building = unit[:1]
-    if building == "A" or "B":
-        index = "1"
-    elif building == "C" or "D":
-        index = "2"
-    elif building == "E" or "F":
-        index = "3"
-    elif building == "H":
-        index = "4"
-    elif building == "G" or "M":
-        index = "5"
-    elif building == "J" or "K":
-        index = "6"
-    elif building == "N":
-        index = "8"
-
     dumpster_coords = {
         "1": (224, 547),
         "2": (354, 503),
         "3": (354, 401),
         "4": (400, 324),
-        "5": (239, 391),
+        "5": (239, 291),
         "6": (378, 280),
         "7": (386, 146),
         "8": (221, 151),
     }
 
-    return dumpster_coords[index]
+    return dumpster_coords
 
 def mailbox_bank(unit):
 
